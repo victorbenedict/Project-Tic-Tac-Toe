@@ -1,0 +1,28 @@
+.box {
+  font-family: Arial, sans-serif;
+  border: #176B87 solid 2px;
+  background-color: #64CCC5;
+  color: #176B87;
+  width: 100px; 
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+  font-size: 75px;
+}
+
+.box:hover {
+  cursor: pointer;
+}
+.container_gameboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0px; 
+  height: 300px;
+  width: 300px;
+}
+
+.btn_restart {
+  margin-top: 20px;
+}
