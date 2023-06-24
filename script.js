@@ -2,7 +2,7 @@
 // ✓ Player marking for X and O
 // ✓ Keep players from marking the marked box
 // ✓ Randomize the player who will get the first turn on the first round (currently affects all rounds)
-// Winning combinations and game results
+// ✓ Winning combinations and game results
 // Scoring
 // Options to change player name 
 // Player switch who will get the first turn in every round
@@ -74,7 +74,7 @@ const game = (() => {
       board[index] = players[playerTurnID].mark
       renderBoard();
       checkWin();
-
+      roundOver();
     }
   }
 
@@ -104,7 +104,16 @@ const game = (() => {
       playerTurn();
     }
   }
-
+  const roundOver = () => {
+    let isBoardFull = !board.includes('');
+    console.log('Board array isFull?', isBoardFull)
+    if ( winner == false && isBoardFull == true){
+      setTimeout(() => {
+        alert('Draw!');
+        nextRound();
+      }, 100);
+    }
+  }
   const nextRound = () => {
     console.log('nextRound')
     board = ['', '', '', '', '', '', '', '',''];
