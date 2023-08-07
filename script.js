@@ -91,9 +91,9 @@ const game = (() => {
       const [a, b, c] = combination;
       if (board[a] && board[a] === board[b] && board[a] === board[c]) {
         winner = true
-        console.log('The winner is ', players[playerTurnID].name);
+        console.log(players[playerTurnID].name, 'is the winner!');
         setTimeout(() => {
-          alert(`The winner is ${players[playerTurnID].name}`);
+          alert(`${players[playerTurnID].name} is the winner!`);
           nextRound();
         }, 100); //Announce the winner
         //reset board
